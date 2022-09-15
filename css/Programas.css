@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/*=====header========*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+  }
+  
+  body {
+      background: #ecf0f1;
+      font-family: 'Amaranth', sans-serif;
+      padding-top: 330px;
+      transition: padding-top 0.5s ease;
+  }
+  
+  header {
+      width: 100%;
+      height: 300px;
+      background: #e88300;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+  }
+  
+  img {
+      margin: all;
+      width:20%;
+      height: 230px;
+      float: left;
+      margin-right: 50px;
+  }
+  
+  
+  header h1 {
+      font-size: 52px;
+      color: white;
+      line-height: 230px;
+      font-weight: 300px;
+      transition: all 0.3s ease;;
+      margin-right: 22%;
+  }
+  
+  header h1 i {
+      font-weight: bold;
+      text-transform: uppercase;
+  }
+  
+  header nav {
+      position: absolute;
+      bottom: 0;
+      height: 68px;
+      line-height: 60px;
+      width: 100%;
+      background: rgba(232,63,0,0.8);
+  }
+  
+  header nav a {
+      color: white;
+      display: ;
+      padding: 10px 15px;
+      line-height: 1;
+      text-decoration: none;
+      border-radius: 5px;
+  }
+  
+  header nav a:hover {
+      background: rgba(0,0,0,0.2);
+  }
+
+  section {
+    margin: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2));
+}
+
+body.sticky-header {
+    padding-top: 100px;
+}
+
+body.sticky-header header {
+    height: 60px;
+    background: #e88300;
+}
+
+body.sticky-header header h1 {
+    transform: scale(0, 0);
+}
+/*============MAIN=============*/
+
+#contenido {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: stretch;
+}
+img {
+    width: 250px;
+    border-radius: 2rem;
+}
+p {
+    width: 50%;
+    height: 65px;
+    text-align: center;   
+}
+article {
+    display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+      margin: 50px auto;
+      padding: 20px 15px;
+      border: 2em rgb(234, 155, 8) solid;
+}
+
+  /*---------Footer------------*/
+
+  footer{
+    width: 100%;
+    padding: 40px 0px;
+    *background-image: url(../img/background-footer.svg);
+    *background-size: cover; 
+    background-color: #f1e175;
+    -webkit-mask-image: url("/img/background-footer.svg");
+    mask-image: url("/img/background-footer.svg");
+    -webkit-mask-size: cover;
+    /*mask-size: cover;*/
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1920px;
+    margin: 20px;
+    margin-top: 100px;
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box__footer .logo img{
+    width: 180px;
+}
+
+.box__footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 800;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+
+/*############MEDIA QUERIES ####################*/
+
+@media screen and (max-width: 768px) {
+
+    header nav {
+        height: 55px;
+    }
+    
+      header nav a {
+            font-size: 10px;
+      }
+  }
+  @media screen and (max-width:768px) {
+    header h1{
+      font-size: 30px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding: 10px auto;
+      margin: 10px;
+    }
+  }
+  @media screen and (max-width:768px){
+    .logo {
+      display: none;
+    }
+    p{
+        display: contents;
+        scroll-snap-align: right;
+    }
+  }

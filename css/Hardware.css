@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/*=====header========*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+  }
+  
+  body {
+      background: #ecf0f1;
+      font-family: 'Amaranth', sans-serif;
+      padding-top: 330px;
+      transition: padding-top 0.5s ease;
+  }
+  
+  header {
+      width: 100%;
+      height: 300px;
+      background: #e88300;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+  }
+  
+  img {
+      margin: all;
+      width:20%;
+      height: 230px;
+      float: left;
+      margin-right: 50px;
+  }
+  
+  
+  header h1 {
+      font-size: 52px;
+      color: white;
+      line-height: 230px;
+      font-weight: 300px;
+      transition: all 0.3s ease;;
+      margin-right: 22%;
+  }
+  
+  header h1 i {
+      font-weight: bold;
+      text-transform: uppercase;
+  }
+  
+  header nav {
+      position: absolute;
+      bottom: 0;
+      height: 68px;
+      line-height: 60px;
+      width: 100%;
+      background: rgba(232,63,0,0.8);
+  }
+  
+  header nav a {
+      color: white;
+      display: ;
+      padding: 10px 15px;
+      line-height: 1;
+      text-decoration: none;
+      border-radius: 5px;
+  }
+  
+  header nav a:hover {
+      background: rgba(0,0,0,0.2);
+  }
+
+  section {
+    margin: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2));
+}
+
+body.sticky-header {
+    padding-top: 100px;
+}
+
+body.sticky-header header {
+    height: 60px;
+    background: #e88300;
+}
+
+body.sticky-header header h1 {
+    transform: scale(0, 0);
+}
+/*==============================
+==========MAIN==================
+==============================*/
+:root {
+	--font-family: 'Barlow Semi Condensed', sans-serif;
+	--font-size: 13px;
+	--medium-font: 500;
+	--semi-bold: 600;
+	--card-width: 19rem;
+	--violet: hsl(263, 55%, 52%);
+	--dark-grayish-blue: hsl(217, 19%, 35%);
+	--dark-blackish-blue: hsl(219, 29%, 14%);
+	--white: hsl(0, 0%, 100%);
+	--light-gray: hsl(0, 0%, 81%);
+	--light-grayish-blue: hsl(210, 46%, 95%);
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	background-color: var(--light-grayish-blue);
+	max-width: auto;
+	margin: 0 auto;
+	position: relative;
+}
+/*===============hardaware venta================*/
+
+.testimonials {
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+	grid-gap: 2rem;
+	grid-auto-flow: dense;
+}
+
+.card {
+	padding: 2rem;
+	border-radius: 10px;
+	color: var(--white);
+	box-shadow: 10px 14px 30px -20px rgba(0, 0, 0, 0.78);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+	/* transform: scale(1.01); */
+	box-shadow: none;
+}
+
+.card__reviewer-pic {
+	border: 2px solid var(--white);
+	border-radius: 50%;
+	margin-right: 1rem;
+	float: left;
+	width: 56px;
+	height: 56px;
+	transform: translate(0px, -5px);
+}
+
+.card__header h2 {
+	opacity: 50%;
+}
+
+.card__intro {
+	margin: 1rem 0;
+	font-size: 1.5rem;
+}
+
+.card__review {
+	font-size: 1rem;
+	opacity: 75%;
+}
+
+/* MODIFIERS */
+.card--violet {
+	background-color: var(--violet);
+	background-image: url(/img/bg3.jpg);
+	background-repeat: no-repeat;
+	background-position: 85% 0;
+	background-size: 8rem;
+}
+
+.card--gray {
+	background-color: var(--dark-grayish-blue);
+}
+
+.card--black {
+	background-color: var(--dark-blackish-blue);
+}
+
+.card--white {
+	background-color: var(--white);
+	color: var(--dark-grayish-blue);
+}
+
+.card--wide {
+	grid-column: auto / span 2;
+}
+
+.card--long {
+	grid-row: auto / span 2;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 767px) {
+	.testimonials {
+		padding: 1rem;
+		grid-template-columns: 1fr 1fr;
+	}
+	/* .card--wide {
+		grid-column: auto;
+	}
+	.card--long {
+		grid-row: auto;
+	} */
+}
+
+@media only screen and (max-width: 650px) {
+	.testimonials {
+		grid-template-columns: 1fr;
+	}
+
+	.card--wide {
+		grid-column: auto;
+	}
+
+	.card--long {
+		grid-row: auto;
+	}
+}
+
+  /*---------Footer------------*/
+
+  footer{
+    width: 100%;
+    padding: 40px 0px;
+    *background-image: url(../img/background-footer.svg);
+    *background-size: cover; 
+    background-color: #f1e175;
+    -webkit-mask-image: url("/img/background-footer.svg");
+    mask-image: url("/img/background-footer.svg");
+    -webkit-mask-size: cover;
+    /*mask-size: cover;*/
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1920px;
+    margin: 20px;
+    margin-top: 100px;
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box__footer .logo img{
+    width: 180px;
+}
+
+.box__footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 800;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+
+/*############MEDIA QUERIES ####################*/
+
+@media screen and (max-width: 768px) {
+
+  header nav {
+      height: 55px;
+  }
+  
+    header nav a {
+          font-size: 10px;
+    }
+}
+@media screen and (max-width:768px) {
+  header h1{
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px auto;
+    margin: 10px;
+  }
+}
+@media screen and (max-width:768px){
+  img {
+    display: none;
+  }
+}
